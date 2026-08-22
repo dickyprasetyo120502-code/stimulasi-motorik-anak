@@ -3707,4 +3707,429 @@ a {
     .team-card span {
         font-size: 10px;
     }
+}/* =========================================================
+   FINAL MOBILE WEBSITE FIX
+   TAMPILAN HP TETAP SEPERTI WEBSITE NORMAL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HEADER INSTANSI
+    ===================================================== */
+
+    .institution-container {
+        width: 96%;
+        min-height: 70px;
+        gap: 10px;
+    }
+
+    .logo-umj {
+        width: 48px;
+        height: 48px;
+    }
+
+    .institution-middle {
+        flex: 1;
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .logo-jakarta {
+        width: 45px;
+    }
+
+    .logo-abad {
+        width: 58px;
+    }
+
+    .logo-jaksehat {
+        width: 52px;
+    }
+
+    .logo-puskesmas {
+        width: 36px;
+    }
+
+    .logo-indonesia {
+        width: 75px;
+        max-height: 50px;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar-container {
+        width: 94%;
+        min-height: 62px;
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .brand-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+    }
+
+    .navbar-actions {
+        margin-left: auto;
+        gap: 7px;
+    }
+
+    .search-box {
+        width: 135px;
+        height: 38px;
+    }
+
+    .mobile-menu-button {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-container {
+        width: 94%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 50px 0 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 650px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 50px);
+        line-height: 1.08;
+    }
+
+    .hero-content > p {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-information {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* =====================================================
+       HERO FOTO
+    ===================================================== */
+
+    .hero-visual {
+        width: 100%;
+        min-height: 430px;
+        padding: 60px 0;
+        margin: 0 auto;
+    }
+
+    .hero-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-placeholder {
+        width: 235px;
+        height: 305px;
+    }
+
+    .floating-card {
+        max-width: 175px;
+        padding: 10px 12px;
+    }
+
+    .floating-card-one {
+        top: 5px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .floating-card-two {
+        bottom: 5px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+
+    /* =====================================================
+       SECTION
+    ===================================================== */
+
+    .age-section,
+    .content-section,
+    .video-section,
+    .about-section,
+    .team-section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        width: 92%;
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       USIA
+    ===================================================== */
+
+    .age-grid {
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .age-card {
+        min-height: 140px;
+    }
+
+
+    /* =====================================================
+       MATERI
+    ===================================================== */
+
+    .content-grid {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .content-card {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       AKTIVITAS
+    ===================================================== */
+
+    .activity-container {
+        width: 92%;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .activity-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       VIDEO
+    ===================================================== */
+
+    .video-container {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 28px 22px;
+    }
+
+    .video-content h2 {
+        font-size: 30px;
+    }
+
+    .video-frame {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       TENTANG
+    ===================================================== */
+
+    .about-container {
+        width: 92%;
+        padding: 32px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+
+    /* =====================================================
+       TIM KELOMPOK
+    ===================================================== */
+
+    .team-grid {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-container {
+        width: 92%;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        width: 92%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .institution-container {
+        width: 95%;
+        min-height: 62px;
+    }
+
+    .logo-umj {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-jakarta {
+        width: 35px;
+    }
+
+    .logo-abad {
+        width: 45px;
+    }
+
+    .logo-jaksehat {
+        width: 40px;
+    }
+
+    .logo-puskesmas {
+        width: 30px;
+    }
+
+    .logo-indonesia {
+        width: 60px;
+    }
+
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .search-box {
+        width: 110px;
+    }
+
+
+    .hero-container {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .hero-visual {
+        min-height: 410px;
+        padding: 55px 0;
+    }
+
+    .hero-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hero-placeholder {
+        width: 215px;
+        height: 285px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
 }
