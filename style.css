@@ -4176,4 +4176,45 @@ a {
     height: 100%;
     display: block;
     border: none;
+}/* =========================================================
+   VIDEO HP - LAYOUT RAPI
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .video-section {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .video-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .video-content {
+        width: 100%;
+    }
+
+    .video-placeholder {
+        width: 100%;
+    }
+
+    .video-frame {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: 0;
+    }
+
 }
