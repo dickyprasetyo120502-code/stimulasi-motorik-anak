@@ -2357,23 +2357,7 @@ a {
    floating card berada di sisi luar foto.
 */
 
-@media (min-width: 1101px) {
 
-    .hero-visual {
-        padding-left: 85px;
-        padding-right: 85px;
-    }
-
-    .floating-card-one {
-        left: -5px;
-        top: 55px;
-    }
-
-    .floating-card-two {
-        right: -5px;
-        bottom: 55px;
-    }
-}
 
 
 /*
@@ -4178,65 +4162,97 @@ a {
 
 
 /* =========================================================
-   VIDEO FRAME
+   VIDEO GOOGLE DRIVE
 ========================================================= */
 
 .video-placeholder {
     width: 100%;
-    min-height: 0;
-    padding: 0;
-
-    border-radius: 20px;
     overflow: hidden;
-
+    border-radius: 25px;
     background: #000;
 }
 
 .video-frame {
     width: 100%;
-    position: relative;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-
-    background: #000;
+    border-radius: 20px;
 }
 
 .video-frame iframe {
     width: 100%;
-    min-height: 300px;
-
+    height: 100%;
     display: block;
-
     border: 0;
 }
 
 
 /* =========================================================
-   VIDEO HP
+   VIDEO — GOOGLE DRIVE
+========================================================= */
+
+.video-placeholder {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #000;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+
+/* =========================================================
+   VIDEO — HP
 ========================================================= */
 
 @media (max-width: 600px) {
 
     .video-container {
         width: 92%;
-        padding: 22px 18px;
+        padding: 28px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .video-content {
+        width: 100%;
     }
 
     .video-placeholder {
         width: 100%;
-        min-height: 0;
-
-        border-radius: 16px;
+        border-radius: 18px;
     }
 
     .video-frame {
         width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 18px;
     }
 
     .video-frame iframe {
         width: 100%;
-        min-height: 220px;
-
-        display: block;
+        height: 100%;
     }
-     }
-      }
+
+}
+}
