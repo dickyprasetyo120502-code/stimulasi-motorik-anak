@@ -1725,6 +1725,251 @@ activityCards.forEach(function (card, index) {
         );
 
     });
+/* =====================================================
+   ULASAN ORANG TUA
+===================================================== */
 
+const reviewName = document.getElementById("reviewName");
+const reviewText = document.getElementById("reviewText");
+const reviewStars = document.getElementById("reviewStars");
+const submitReview = document.getElementById("submitReview");
+const reviewList = document.getElementById("reviewList");
+
+let selectedRating = 0;
+
+
+/* =====================================================
+   PILIH RATING BINTANG
+===================================================== */
+
+if (reviewStars) {
+
+    const stars =
+        reviewStars.querySelectorAll("button");
+
+    stars.forEach(function (star) {
+
+        star.addEventListener("click", function () {
+
+            selectedRating =
+                Number(star.dataset.rating);
+
+            stars.forEach(function (item) {
+
+                const rating =
+                    Number(item.dataset.rating);
+
+                if (rating <= selectedRating) {
+
+                    item.classList.add("active");
+
+                } else {
+
+                    item.classList.remove("active");
+
+                }
+
+            });
+
+        });
+
+    });
+
+}
+
+
+/* =====================================================
+   TAMPILKAN ULASAN
+===================================================== */
+
+function renderReviews() {
+
+    if (!reviewList) {
+        return;
+    }
+
+    const reviews =
+        JSON.parse(
+            localStorage.getItem("stimulakidsReviews") || "[]"
+        );
+
+    reviewList.innerHTML = "";
+
+    if (reviews.length === 0) {
+
+        reviewList.innerHTML = `
+            <div class="review-empty">
+                <i class="fa-regular fa-comment"></i>
+
+                <h3>
+                    Belum ada ulasan
+                </h3>
+
+                <p>
+                    Jadilah orang pertama yang memberikan ulasan.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    reviews.forEach(function (review) {
+
+        let stars = "";
+
+        for (let i = 1; i <= 5; i++) {
+
+            stars += `
+                <span class="${i <= review.rating ? "active" : ""}">
+                    ★
+                </span>
+            `;
+
+        }
+
+
+        const card =
+            document.createElement("div");
+
+        card.className = "review-card";
+
+        card.innerHTML = `
+
+            <div class="review-card-top">
+
+                <div class="review-avatar">
+                    ${review.name.charAt(0).toUpperCase()}
+                </div>
+
+                <div class="review-user">
+
+                    <h3>
+                        ${review.name}
+                    </h3>
+
+                    <div class="review-rating">
+                        ${stars}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="review-message">
+                ${review.text}
+            </p>
+
+        `;
+
+        reviewList.appendChild(card);
+
+    });
+
+}
+
+
+/* =====================================================
+   KIRIM ULASAN
+===================================================== */
+
+if (submitReview) {
+
+    submitReview.addEventListener("click", function () {
+
+        const name =
+            reviewName.value.trim();
+
+        const text =
+            reviewText.value.trim();
+
+
+        if (!name) {
+
+            alert("Silakan masukkan nama terlebih dahulu.");
+
+            reviewName.focus();
+
+            return;
+        }
+
+
+        if (selectedRating === 0) {
+
+            alert("Silakan pilih rating bintang.");
+
+            return;
+        }
+
+
+        if (!text) {
+
+            alert("Silakan tulis ulasan terlebih dahulu.");
+
+            reviewText.focus();
+
+            return;
+        }
+
+
+        const reviews =
+            JSON.parse(
+                localStorage.getItem("stimulakidsReviews") || "[]"
+            );
+
+
+        reviews.unshift({
+
+            name: name,
+
+            rating: selectedRating,
+
+            text: text,
+
+            date: new Date().toLocaleDateString("id-ID")
+
+        });
+
+
+        localStorage.setItem(
+            "stimulakidsReviews",
+            JSON.stringify(reviews)
+        );
+
+
+        /* Reset form */
+
+        reviewName.value = "";
+        reviewText.value = "";
+
+        selectedRating = 0;
+
+
+        const stars =
+            reviewStars.querySelectorAll("button");
+
+        stars.forEach(function (star) {
+
+            star.classList.remove("active");
+
+        });
+
+
+        renderReviews();
+
+
+        alert("Terima kasih! Ulasan kamu berhasil dikirim.");
+
+    });
+
+}
+
+
+/* =====================================================
+   LOAD ULASAN
+===================================================== */
+
+renderReviews();
 
 });

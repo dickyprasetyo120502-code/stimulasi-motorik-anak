@@ -74,14 +74,14 @@
         <div class="institution-container">
 
 
-            <!-- LOGO UMJ -->
+            <!-- LOGO puskesmas -->
 
             <div class="institution-left">
 
                 <img
-                    src="assets/images/logoumj.png"
-                    alt="Logo Universitas Muhammadiyah Jakarta"
-                    class="logo-umj"
+                    src="assets/images/logopuskesmas.png"
+                    alt="Puskesmas"
+                    class="logo-puskesmas" style="width: 1000px; height: 800px;"
                 >
 
             </div>
@@ -191,6 +191,10 @@
 
                 <a href="#tentang">
                     Tentang
+                </a>
+
+                <a href="#ulasan">
+                    Ulasan
                 </a>
 
             </div>
@@ -310,6 +314,11 @@
 
             Tentang
 
+        </a>
+
+        <a href="#ulasan">
+            <i class="fa-solid fa-play"></i>
+            Ulasan
         </a>
 
     </div>
@@ -1130,114 +1139,81 @@
             </div>
 
        </section>
+       <!-- ==========================
+        ULASAN ORANG TUA
+        ========================== -->
+
+<section class="review-section" id="ulasan">
+
+    <div class="review-container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                Ulasan Pengguna
+            </span>
+
+            <h2>
+                Apa Kata Orang Tua?
+            </h2>
+
+            <p>
+                Bagikan pengalaman kamu menggunakan StimulaKids.
+            </p>
+
+        </div>
 
 
-        <!-- =====================================================
-             TIM / ANGGOTA KELOMPOK
-        ====================================================== -->
+        <!-- FORM ULASAN -->
 
-        <section class="team-section" id="tim">
+        <div class="review-form">
 
-            <div class="section-heading">
+            <input
+                type="text"
+                id="reviewName"
+                placeholder="Nama kamu"
+                maxlength="40"
+            >
 
-                <span class="section-label">
-                    Tim Kami
-                </span>
+            <div class="review-stars" id="reviewStars">
 
-                <h2>
-                    Dikembangkan oleh Kelompok
-                </h2>
-
-                <p>
-                    Website StimulaKids dikembangkan sebagai media
-                    edukasi untuk mendukung tumbuh kembang anak.
-                </p>
-
-            </div>
-
-
-            <div class="team-grid">
-
-                <div class="team-card">
-
-                    <div class="team-number">
-                        01
-                    </div>
-
-                    <div>
-                        <h3>
-                            Afifah Luthfiyah
-                        </h3>
-
-                        <span>
-                            25090300152
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="team-card">
-
-                    <div class="team-number">
-                        02
-                    </div>
-
-                    <div>
-                        <h3>
-                            Nurul Laili Nadiroh
-                        </h3>
-
-                        <span>
-                            25090300153
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="team-card">
-
-                    <div class="team-number">
-                        03
-                    </div>
-
-                    <div>
-                        <h3>
-                            Asthila Ayu Khinanthi
-                        </h3>
-
-                        <span>
-                            25090300154
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="team-card">
-
-                    <div class="team-number">
-                        04
-                    </div>
-
-                    <div>
-                        <h3>
-                            Nasya Mutiara Shakira
-                        </h3>
-
-                        <span>
-                            25090300155
-                        </span>
-                    </div>
-
-                </div>
+                <button type="button" data-rating="1">★</button>
+                <button type="button" data-rating="2">★</button>
+                <button type="button" data-rating="3">★</button>
+                <button type="button" data-rating="4">★</button>
+                <button type="button" data-rating="5">★</button>
 
             </div>
 
-        </section>
+            <textarea
+                id="reviewText"
+                placeholder="Tulis ulasan kamu..."
+                maxlength="300"
+            ></textarea>
 
-    </main>
+            <button
+                type="button"
+                id="submitReview"
+                class="review-submit"
+            >
+                <i class="fa-solid fa-paper-plane"></i>
+                Kirim Ulasan
+            </button>
+
+        </div>
+
+
+        <!-- DAFTAR ULASAN -->
+
+        <div
+            class="review-list"
+            id="reviewList"
+        ></div>
+
+    </div>
+
+</section>
+
 
 
 
@@ -1306,6 +1282,9 @@
                 <a href="#aktivitas">
                     Aktivitas
                 </a>
+                <a href="#ulasan">
+                    Ulasan
+                </a>
 
             </div>
 
@@ -1346,7 +1325,7 @@
 
                     <i class="fa-brands fa-instagram"></i>
 
-                    puskesmas_cempaka_putih
+                    puskesmas
 
                 </span>
 
@@ -1355,7 +1334,7 @@
 
                     <i class="fa-brands fa-facebook"></i>
 
-                    Puskesmas Cempaka Putih
+                    Puskesmas 
 
                 </span>
 
